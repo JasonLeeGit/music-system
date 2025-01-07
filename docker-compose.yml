@@ -1,0 +1,9 @@
+services:
+  music.system:
+    image: music.system:latest
+    container_name: music.system
+    build:
+      context: .
+      dockerfile: dockerfile
+    ports:
+      - "8080:8080"
