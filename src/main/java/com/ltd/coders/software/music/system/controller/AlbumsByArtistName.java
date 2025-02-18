@@ -53,7 +53,8 @@ public class AlbumsByArtistName {
 			}
 			return ResponseEntity.ok(albumResponses);
 		} else {
-			return ResponseEntity.noContent().build();
+			//return ResponseEntity.noContent().build(); fails json parse in react
+			return ResponseEntity.ok(new ArrayList<AlbumResponse>());
 		}
 	}
 }
